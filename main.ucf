@@ -1,0 +1,94 @@
+NET "clk" LOC = A10;
+
+NET "vga_hsync" SLEW = FAST;
+NET "vga_vsync" SLEW = FAST;
+
+NET "vga_hsync" LOC = A14;
+NET "vga_vsync" LOC = B14;
+
+NET "vga_r[0]" SLEW = FAST;
+NET "vga_r[1]" SLEW = FAST;
+NET "vga_r[2]" SLEW = FAST;
+NET "vga_r[3]" SLEW = FAST;
+NET "vga_r[4]" SLEW = FAST;
+NET "vga_r[5]" SLEW = FAST;
+NET "vga_r[6]" SLEW = FAST;
+NET "vga_r[7]" SLEW = FAST;
+
+NET "vga_r[0]" LOC = R12;
+NET "vga_r[1]" LOC = T12;
+NET "vga_r[2]" LOC = T14;
+NET "vga_r[3]" LOC = T13;
+NET "vga_r[4]" LOC = T15;
+NET "vga_r[5]" LOC = R14;
+NET "vga_r[6]" LOC = R16;
+NET "vga_r[7]" LOC = R15;
+
+NET "vga_g[0]" SLEW = FAST;
+NET "vga_g[1]" SLEW = FAST;
+NET "vga_g[2]" SLEW = FAST;
+NET "vga_g[3]" SLEW = FAST;
+NET "vga_g[4]" SLEW = FAST;
+NET "vga_g[5]" SLEW = FAST;
+NET "vga_g[6]" SLEW = FAST;
+NET "vga_g[7]" SLEW = FAST;
+
+NET "vga_g[0]" LOC = P16;
+NET "vga_g[1]" LOC = P15;
+NET "vga_g[2]" LOC = L13;
+NET "vga_g[3]" LOC = L12;
+NET "vga_g[4]" LOC = M14;
+NET "vga_g[5]" LOC = M13;
+NET "vga_g[6]" LOC = N16;
+NET "vga_g[7]" LOC = N14;
+
+NET "vga_b[0]" SLEW = FAST;
+NET "vga_b[1]" SLEW = FAST;
+NET "vga_b[2]" SLEW = FAST;
+NET "vga_b[3]" SLEW = FAST;
+NET "vga_b[4]" SLEW = FAST;
+NET "vga_b[5]" SLEW = FAST;
+NET "vga_b[6]" SLEW = FAST;
+NET "vga_b[7]" SLEW = FAST;
+
+NET "vga_b[0]" LOC = M15;
+NET "vga_b[1]" LOC = K12;
+NET "vga_b[2]" LOC = K11;
+NET "vga_b[3]" LOC = L14;
+NET "vga_b[4]" LOC = L16;
+NET "vga_b[5]" LOC = K16;
+NET "vga_b[6]" LOC = K15;
+NET "vga_b[7]" LOC = J13;
+
+NET "vga_pixel_clock" LOC = K14;
+
+NET "vga_pixel_clock" SLEW = FAST;
+
+NET "vga_blank" LOC = M16;
+
+NET "vga_blank" SLEW = FAST;
+
+NET "clk" TNM_NET = "clk";
+TIMESPEC TS_clk = PERIOD "clk" 20 ns HIGH 50 %;
+
+INST "cpu1/memory_interface/ram/ram_0_byte0/Mram_ram" LOC = RAMB16_X0Y30;
+INST "cpu1/memory_interface/ram/ram_0_byte1/Mram_ram" LOC = RAMB16_X0Y22;
+INST "cpu1/memory_interface/ram/ram_0_byte2/Mram_ram" LOC = RAMB16_X1Y30;
+INST "cpu1/memory_interface/ram/ram_0_byte3/Mram_ram" LOC = RAMB16_X1Y22;
+INST "cpu1/memory_interface/ram/ram_1_byte0/Mram_ram" LOC = RAMB16_X0Y28;
+INST "cpu1/memory_interface/ram/ram_1_byte1/Mram_ram" LOC = RAMB16_X0Y20;
+INST "cpu1/memory_interface/ram/ram_1_byte2/Mram_ram" LOC = RAMB16_X1Y28;
+INST "cpu1/memory_interface/ram/ram_1_byte3/Mram_ram" LOC = RAMB16_X1Y20;
+INST "cpu1/memory_interface/ram/ram_2_byte0/Mram_ram" LOC = RAMB16_X0Y26;
+INST "cpu1/memory_interface/ram/ram_2_byte1/Mram_ram" LOC = RAMB16_X0Y18;
+INST "cpu1/memory_interface/ram/ram_2_byte2/Mram_ram" LOC = RAMB16_X1Y26;
+INST "cpu1/memory_interface/ram/ram_2_byte3/Mram_ram" LOC = RAMB16_X1Y18;
+INST "cpu1/memory_interface/ram/ram_3_byte0/Mram_ram" LOC = RAMB16_X0Y24;
+INST "cpu1/memory_interface/ram/ram_3_byte1/Mram_ram" LOC = RAMB16_X0Y16;
+INST "cpu1/memory_interface/ram/ram_3_byte2/Mram_ram" LOC = RAMB16_X1Y24;
+INST "cpu1/memory_interface/ram/ram_3_byte3/Mram_ram" LOC = RAMB16_X1Y16;
+
+NET "switch_2" LOC = T8;
+NET "switch_3" LOC = R7;
+NET "led_1" LOC = T9;
+NET "led_3" LOC = R9;

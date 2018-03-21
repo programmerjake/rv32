@@ -1,0 +1,34 @@
+ADDRESS_SPACE ram COMBINED [0x10000:0x17FFF]
+    ADDRESS_RANGE RAMB16
+        BUS_BLOCK
+            cpu1/memory_interface/ram/ram_0_byte0/Mram_ram [7:0] LOC = X0Y30;
+            cpu1/memory_interface/ram/ram_0_byte1/Mram_ram [15:8] LOC = X0Y22;
+            cpu1/memory_interface/ram/ram_0_byte2/Mram_ram [23:16] LOC = X1Y30;
+            cpu1/memory_interface/ram/ram_0_byte3/Mram_ram [31:24] LOC = X1Y22;
+        END_BUS_BLOCK;
+    END_ADDRESS_RANGE;
+    ADDRESS_RANGE RAMB16
+        BUS_BLOCK
+            cpu1/memory_interface/ram/ram_1_byte0/Mram_ram [7:0] LOC = X0Y28;
+            cpu1/memory_interface/ram/ram_1_byte1/Mram_ram [15:8] LOC = X0Y20;
+            cpu1/memory_interface/ram/ram_1_byte2/Mram_ram [23:16] LOC = X1Y28;
+            cpu1/memory_interface/ram/ram_1_byte3/Mram_ram [31:24] LOC = X1Y20;
+        END_BUS_BLOCK;
+    END_ADDRESS_RANGE;
+    ADDRESS_RANGE RAMB16
+        BUS_BLOCK
+            cpu1/memory_interface/ram/ram_2_byte0/Mram_ram [7:0] LOC = X0Y26;
+            cpu1/memory_interface/ram/ram_2_byte1/Mram_ram [15:8] LOC = X0Y18;
+            cpu1/memory_interface/ram/ram_2_byte2/Mram_ram [23:16] LOC = X1Y26;
+            cpu1/memory_interface/ram/ram_2_byte3/Mram_ram [31:24] LOC = X1Y18;
+        END_BUS_BLOCK;
+    END_ADDRESS_RANGE;
+    ADDRESS_RANGE RAMB16
+        BUS_BLOCK
+            cpu1/memory_interface/ram/ram_3_byte0/Mram_ram [7:0] LOC = X0Y24;
+            cpu1/memory_interface/ram/ram_3_byte1/Mram_ram [15:8] LOC = X0Y16;
+            cpu1/memory_interface/ram/ram_3_byte2/Mram_ram [23:16] LOC = X1Y24;
+            cpu1/memory_interface/ram/ram_3_byte3/Mram_ram [31:24] LOC = X1Y16;
+        END_BUS_BLOCK;
+    END_ADDRESS_RANGE;
+END_ADDRESS_SPACE;
