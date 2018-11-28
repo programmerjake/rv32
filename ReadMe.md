@@ -45,6 +45,28 @@ Requires Xilinx's ISE v. 14.7 to be installed in /opt/Xilinx (just leave the def
     # at this point the built bitstream is in output.bit
     djtgcfg prog -d JtagHS2 -i 0 -f output.bit # program the FPGA
 
+## Simulating using Icarus Verilog
+Doesn't require Xilinx's ISE or Digilent's programmer
+
+    sudo apt-get install git g++ autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev
+    sudo mkdir /opt/riscv
+    sudo chown $USER /opt/riscv # so you don't need root when building; you can change back after building riscv-gnu-toolchain
+    git clone --recursive https://github.com/riscv/riscv-gnu-toolchain.git
+    export PATH=/opt/riscv/bin:"$PATH"
+    cd riscv-gnu-toolchain
+    ./configure --prefix=/opt/riscv --with-arch=rv32i
+    make
+    sudo chown -R root:root /opt/riscv # change owner back to root as the compiler is finished installing
+    cd ..
+    git clone https://github.com/programmerjake/rv32.git
+    cd rv32/software
+    make ram0_byte0.hex
+    cd ..
+    iveriog -o rv32 -Wall *.v
+    vvp -n rv32 # doesn't terminate, press Ctrl+C when it's generated enough output
+
+The output is in `dump.vcd`, which can be viewed with GTKWave.
+
 ## Building the hardware (only required if verilog source is modified)
 
 Requires having built the software at least once to generate the ram initialization files.

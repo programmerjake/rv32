@@ -26,6 +26,8 @@ module main_test;
 
 	// Inputs
 	reg clk;
+	reg switch_2;
+	reg switch_3;
 
 	// Outputs
 	wire [7:0] vga_r;
@@ -35,6 +37,9 @@ module main_test;
 	wire vga_vsync;
 	wire vga_blank;
 	wire vga_pixel_clock;
+	wire led_1;
+	wire led_3;
+
 
 	// Instantiate the Unit Under Test (UUT)
 	main uut (
@@ -45,12 +50,19 @@ module main_test;
 		.vga_hsync(vga_hsync), 
 		.vga_vsync(vga_vsync), 
 		.vga_blank(vga_blank), 
-		.vga_pixel_clock(vga_pixel_clock)
+		.vga_pixel_clock(vga_pixel_clock),
+		.switch_2(switch_2),
+		.switch_3(switch_3),
+		.led_1(led_1),
+		.led_3(led_3)
 	);
 
 	initial begin
 		// Initialize Inputs
+		$dumpvars;
 		clk = 0;
+		switch_2 = 0;
+		switch_3 = 0;
 
 		// Add stimulus here
         
